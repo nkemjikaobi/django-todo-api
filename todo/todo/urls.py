@@ -22,4 +22,6 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('auth/', include('dj_rest_auth.urls')),
     path('social-login/google/', GoogleLogin.as_view(), name='google_login'),
+    path(r'^accounts/', include('allauth.urls'), name='socialaccount_signup'),
+
 ]
